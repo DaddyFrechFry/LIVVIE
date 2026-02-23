@@ -1,2 +1,3 @@
 # LIVVIE
 digital assistant
+LIVVIE is my first ever try at coding my own digital assistant. asof now, i can get her to "activate" but immediately run into errors... ANYONE is welcome to help or give me tips or pointers....
