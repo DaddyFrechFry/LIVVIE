@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LIVVIE - Your Digital Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="auth-screen" class="screen active">
+        <div class="auth-container">
+            <div class="logo-container">
+                <h1 class="logo">LIVVIE</h1>
+                <p class="tagline">Your Playful AI Assistant</p>
+            </div>
+
+            <div id="auth-forms">
+                <div id="login-form" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <input type="email" id="login-email" placeholder="Email" autocomplete="email">
+                    <input type="password" id="login-password" placeholder="Password" autocomplete="current-password">
+                    <button id="login-btn" class="primary-btn">Sign In</button>
+                    <p class="auth-switch">Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+                </div>
+
+                <div id="signup-form" class="auth-form">
+                    <h2>Create Account</h2>
+                    <input type="email" id="signup-email" placeholder="Email" autocomplete="email">
+                    <input type="password" id="signup-password" placeholder="Password" autocomplete="new-password">
+                    <button id="signup-btn" class="primary-btn">Sign Up</button>
+                    <p class="auth-switch">Already have an account? <a href="#" id="show-login">Sign In</a></p>
+                </div>
+            </div>
+
+            <div id="auth-error" class="error-message"></div>
+        </div>
+    </div>
+
+    <div id="main-screen" class="screen">
+        <div class="app-container">
+            <header class="app-header">
+                <div class="header-left">
+                    <h1 class="app-title">LIVVIE</h1>
+                </div>
+                <div class="header-right">
+                    <button id="settings-btn" class="icon-btn" title="Settings">⚙️</button>
+                    <button id="logout-btn" class="icon-btn" title="Logout">🚪</button>
+                </div>
+            </header>
+
+            <div class="chat-container">
+                <div id="messages-container" class="messages"></div>
+                <div class="input-container">
+                    <button id="mic-btn" class="mic-btn" title="Click to speak">
+                        <span class="mic-icon">🎤</span>
+                    </button>
+                    <input type="text" id="text-input" placeholder="Type or click the mic to speak...">
+                    <button id="send-btn" class="send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-item">
+                    <label>
+                        <input type="checkbox" id="voice-enabled" checked>
+                        <span>Voice Responses</span>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <span>Personality Mode</span>
+                        <select id="personality-mode">
+                            <option value="flirty">Flirty</option>
+                            <option value="friendly">Friendly</option>
+                            <option value="professional">Professional</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="setting-item">
+                    <label>
+                        <span>Voice</span>
+                        <select id="voice-select"></select>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
